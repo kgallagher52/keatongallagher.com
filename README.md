@@ -1,2 +1,2 @@
 # keatongallagher.com
-My personal site using Typescript, React, JEST &amp; ENZYME for my environment. 
+My personal site using React, Typescript, Jest, and Enzyme for my environment. 
