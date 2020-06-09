@@ -28,9 +28,15 @@ const Canvas = () => {
     c.stroke(); // Draw
 
     /* Arc / Circle */
-    c.beginPath(); // Starts new line
-    c.arc(100, 60, 10, 0, 6.5, false);
-    c.stroke();
+
+    for (var i = 0; i < 3; i++) {
+      var x = (Math.random() * window.innerWidth) / 6;
+      var y = (Math.random() * window.innerHeight) / 6;
+      c.beginPath(); // Starts new line
+      c.arc(x, y, 10, 0, 6.5, false);
+      c.strokeStyle = "blue";
+      c.stroke();
+    }
   }, []);
   return (
     <div className="canvas" data-test="canvas-page">
