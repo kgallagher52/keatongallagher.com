@@ -1,0 +1,11 @@
+.canvas .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.canvas canvas {
+  background: darkblue;
+  border: 1px solid black;
+}
