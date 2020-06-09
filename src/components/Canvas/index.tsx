@@ -26,6 +26,11 @@ const Canvas = () => {
     c.lineTo(230, 90);
     c.strokeStyle = "red";
     c.stroke(); // Draw
+
+    /* Arc / Circle */
+    c.beginPath(); // Starts new line
+    c.arc(100, 60, 10, 0, 6.5, false);
+    c.stroke();
   }, []);
   return (
     <div className="canvas" data-test="canvas-page">
@@ -40,12 +45,36 @@ const Canvas = () => {
           </ol>
           <ol>
             <h3>Canvas Objects:</h3>
-            <li>Rectangles</li>
-            <li>Lines</li>
-            <li>Arcs / Circles</li>
-            <li>Bezier Curves</li>
-            <li>Images</li>
-            <li>Rectangles</li>
+            <li>
+              <a href="https://www.youtube.com/redirect?redir_token=9Dufl4zqfiDAA5hfeVrZmTel3Tl8MTU5MTc0OTQ5MUAxNTkxNjYzMDkx&event=video_description&v=83L6B13ixQ0&q=https%3A%2F%2Fchristopherlis.com%2Fprojects%2Famplify">
+                Rectangles
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/redirect?redir_token=9Dufl4zqfiDAA5hfeVrZmTel3Tl8MTU5MTc0OTQ5MUAxNTkxNjYzMDkx&event=video_description&v=83L6B13ixQ0&q=https%3A%2F%2Fchristopherlis.com%2Fprojects%2Fits-alive%21">
+                Lines
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/redirect?redir_token=9Dufl4zqfiDAA5hfeVrZmTel3Tl8MTU5MTc0OTQ5MUAxNTkxNjYzMDkx&event=video_description&v=83L6B13ixQ0&q=https%3A%2F%2Fchristopherlis.com%2Fprojects%2Fintertwined">
+                Arcs / Circles
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/redirect?redir_token=9Dufl4zqfiDAA5hfeVrZmTel3Tl8MTU5MTc0OTQ5MUAxNTkxNjYzMDkx&event=video_description&v=83L6B13ixQ0&q=http%3A%2F%2Fcodepen.io%2Ftholman%2Ffull%2Ffoxtn%2F">
+                Bezier Curves
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/redirect?redir_token=9Dufl4zqfiDAA5hfeVrZmTel3Tl8MTU5MTc0OTQ5MUAxNTkxNjYzMDkx&event=video_description&v=83L6B13ixQ0&q=http%3A%2F%2Fcodepen.io%2Fallanpope%2Fpen%2FLVWYYd">
+                Images
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/redirect?redir_token=9Dufl4zqfiDAA5hfeVrZmTel3Tl8MTU5MTc0OTQ5MUAxNTkxNjYzMDkx&event=video_description&v=83L6B13ixQ0&q=http%3A%2F%2Fcodepen.io%2Fsakri%2Ffull%2FmtlDu%2F">
+                Rectangles
+              </a>
+            </li>
           </ol>
         </div>
         <h4>My Canvas</h4>
