@@ -32,9 +32,11 @@ const Canvas = () => {
     for (var i = 0; i < 3; i++) {
       var x = (Math.random() * window.innerWidth) / 6;
       var y = (Math.random() * window.innerHeight) / 6;
+      const randomColor =
+        "#" + Math.floor(Math.random() * 16777215).toString(16);
       c.beginPath(); // Starts new line
       c.arc(x, y, 10, 0, 6.5, false);
-      c.strokeStyle = "blue";
+      c.strokeStyle = randomColor;
       c.stroke();
     }
   }, []);
