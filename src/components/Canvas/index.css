@@ -5,7 +5,11 @@
   flex-direction: column;
 }
 
+.canvas .info {
+  display: flex;
+}
+
 .canvas canvas {
-  background: darkblue;
+  background: white;
   border: 1px solid black;
 }
