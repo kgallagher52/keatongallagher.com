@@ -9,40 +9,64 @@ const Canvas = () => {
     var c = e.getContext("2d");
 
     /* Drawing Rectangle */
-    c.fillStyle = "rgba(0,0,0,0.3)";
-    c.fillRect(100, 100, 25, 25);
-    c.fillStyle = "orange";
-    c.fillRect(150, 75, 25, 25);
-    c.fillStyle = "purple";
-    c.fillRect(200, 100, 25, 25);
+    // c.fillStyle = "rgba(0,0,0,0.3)";
+    // c.fillRect(100, 100, 25, 25);
+    // c.fillStyle = "orange";
+    // c.fillRect(150, 75, 25, 25);
+    // c.fillStyle = "purple";
+    // c.fillRect(200, 100, 25, 25);
 
     /* Drawing a Line */
-    c.beginPath();
-    c.moveTo(90, 90); // Where to start the line
-    c.lineTo(120, 100); // Where draw too
-    c.lineTo(190, 100);
-    c.lineTo(200, 100);
-    c.lineTo(230, 90);
-    c.lineTo(230, 90);
-    c.strokeStyle = "red";
-    c.stroke(); // Draw
+    // c.beginPath();
+    // c.moveTo(90, 90); // Where to start the line
+    // c.lineTo(120, 100); // Where draw too
+    // c.lineTo(190, 100);
+    // c.lineTo(200, 100);
+    // c.lineTo(230, 90);
+    // c.lineTo(230, 90);
+    // c.strokeStyle = "red";
+    // c.stroke(); // Draw
 
     /* Arc / Circle */
 
-    for (var i = 0; i < 3; i++) {
-      var x = (Math.random() * window.innerWidth) / 6;
-      var y = (Math.random() * window.innerHeight) / 6;
-      const randomColor =
-        "#" + Math.floor(Math.random() * 16777215).toString(16);
-      c.beginPath(); // Starts new line
-      c.arc(x, y, 10, 0, 6.5, false);
-      c.strokeStyle = randomColor;
+    // for (var i = 0; i < 3; i++) {
+    //   var x = (Math.random() * window.innerWidth) / 6;
+    //   var y = (Math.random() * window.innerHeight) / 6;
+    //   const randomColor =
+    //     "#" + Math.floor(Math.random() * 16777215).toString(16);
+    //   c.beginPath(); // Starts new line
+    //   c.arc(x, y, 10, 0, 6.5, false);
+    //   c.strokeStyle = randomColor;
+    //   c.stroke();
+    // }
+    let x = Math.random() * 300;
+    let y = Math.random() * 150;
+    let dy = (Math.random() - 0.5) * 10; //Can get  both a negative or postive value
+    let dx = (Math.random() - 0.5) * 10;
+    let radius = 10;
+    const animate = () => {
+      requestAnimationFrame(animate);
+      c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      c.beginPath();
+      c.arc(x, y, radius, 0, Math.PI * 2, false);
+      c.strokeStyle = "darkblue";
       c.stroke();
-    }
+      if (x + radius > 300 || x - radius < 0) {
+        dx = -dx;
+      }
+      if (y + radius > 150 || y - radius < 0) {
+        dy = -dy;
+      }
+      x += dx; /* dx = velocity */
+      y += dy;
+      console.log("animation");
+    };
+    animate();
   }, []);
   return (
     <div className="canvas" data-test="canvas-page">
-      <div className="wrapper">
+      <div>
         <div className="info">
           <ol>
             <h3>Four Essential Skills for Any HTML5 Canvas Piece:</h3>

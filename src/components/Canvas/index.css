@@ -1,12 +1,7 @@
 .canvas .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .canvas .info {
-  display: flex;
 }
 
 .canvas canvas {
